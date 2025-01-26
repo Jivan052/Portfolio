@@ -1,7 +1,7 @@
 const skills = {
   technical: [
     { name: "JavaScript", level: 90 },
-    { name: "React.js", level: 85 },
+    { name: "React.js", level: 60 },
     { name: "Node.js", level: 60 },
     { name: "Python", level: 90 },
     { name: "HTML/CSS", level: 90 },
