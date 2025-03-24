@@ -8,7 +8,7 @@ export default function About() {
         
         <div className="max-w-3xl mx-auto text-gray-600 space-y-6">
           <p className="leading-relaxed">
-            I am a passionate Frontend Developer,Open source contributer, Aspiring AI & ML engineer. Passionate about building realtime web applications & Effective products. As an passionate undergrad with a deep curiosity for creating things that make a difference in people's lives.
+            I am a passionate Frontend Developer,Open source contributor, Aspiring AI & ML engineer. Passionate about building realtime web applications & Effective products. As an passionate undergrad with a deep curiosity for creating things that make a difference in people's lives.
           </p>
           
           <p className="leading-relaxed">
