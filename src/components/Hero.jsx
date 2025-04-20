@@ -3,6 +3,7 @@ import { FaGithub, FaLinkedin, FaArrowDown } from 'react-icons/fa';
 import { FaHackerrank } from "react-icons/fa6";
 import { SiKaggle, SiHuggingface } from "react-icons/si";
 import { useState, useEffect } from 'react';
+import JivanSvg from '../assets/Jivan.svg';
 
 const socials = [
   { Icon: FaGithub, url: "https://github.com/Jivan052", label: "GitHub" },
@@ -91,7 +92,7 @@ export default function Hero() {
           >
             <div className="w-48 h-48 mx-auto relative">
               <img
-                src="https://i.pinimg.com/736x/9d/37/12/9d371210337e4417faf9daa7f280769f.jpg"
+                src={JivanSvg}
                 alt="Professional headshot"
                 className="rounded-full shadow-lg relative z-10 border-4 border-white object-cover w-full h-full"
               />

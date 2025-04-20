@@ -1,12 +1,21 @@
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { useState } from 'react';
 import AnimatedSection from './AnimatedSection';
 import openoctSvg from '../assets/openoct.svg';
 import kalisteeSvg from '../assets/kalistee.svg';
 import codebyteSvg from '../assets/Codebyte.svg';
+import canvaaiSvg from '../assets/canvaai.svg';
 
 const projects = [
-
+  {
+    title: "CanvaAi",
+    description: "A platform for effective data analysis and visualization using AI",
+    image: canvaaiSvg,
+    technologies: ["TypeScript", "Deepseek-R1", "MCP", "MongoDB"],
+    demoUrl: "https://canvatical.vercel.app/",
+    githubUrl: "https://github.com/Jivan052/Canva-ai",
+  },
   {
     title: "OpenOct",
     description: "Designed whole Open source club website with React and Firebase",
@@ -31,10 +40,21 @@ const projects = [
     demoUrl: "https://supermind.vercel.app/",
     githubUrl: "https://github.com/Jivan052/Supermind",
   },
-  
 ];
 
 export default function Projects() {
+  // State for showing all projects
+  const [showAll, setShowAll] = useState(false);
+  
+  // Determine how many projects to display
+  const initialProjectCount = 3;
+  const displayedProjects = showAll ? projects : projects.slice(0, initialProjectCount);
+  
+  // Function to toggle showing all projects
+  const handleLoadMore = () => {
+    setShowAll(true);
+  };
+
   return (
     <section id="projects" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,7 +63,7 @@ export default function Projects() {
         </AnimatedSection>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {displayedProjects.map((project, index) => (
             <AnimatedSection key={index} delay={index * 0.2}>
               <motion.div
                 whileHover={{ y: -5 }}
@@ -97,6 +117,25 @@ export default function Projects() {
             </AnimatedSection>
           ))}
         </div>
+        
+        {/* Load More Button - only show if there are more projects to display */}
+        {!showAll && projects.length > initialProjectCount && (
+          <motion.div 
+            className="flex justify-center mt-12"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+          >
+            <motion.button
+              onClick={handleLoadMore}
+              className="px-6 py-3 bg-primary text-white rounded-md shadow-md hover:bg-primary-dark transition-colors duration-300"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Load More Projects
+            </motion.button>
+          </motion.div>
+        )}
       </div>
     </section>
   );
