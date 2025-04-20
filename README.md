@@ -12,5 +12,4 @@ Welcome to my portfolio website! This repository contains the code for my dynami
 - 📱 **Responsive Design**: The layout is fully responsive and adapts to different screen sizes.
 - 🎨 **Modern UI**: Clean and modern user interface design.
 
-## 🛠 Technologies Used
-- **React + vite**
+**Created with ❤️ by [Jivan Jamdar](https://github.com/Jivan052)**
