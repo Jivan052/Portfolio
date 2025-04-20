@@ -1,14 +1,17 @@
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaArrowDown } from 'react-icons/fa';
 import { FaHackerrank } from "react-icons/fa6";
-import { SiKaggle } from "react-icons/si";
+import { SiKaggle, SiHuggingface } from "react-icons/si";
 import { useState, useEffect } from 'react';
 
 const socials = [
   { Icon: FaGithub, url: "https://github.com/Jivan052", label: "GitHub" },
   { Icon: FaLinkedin, url: "https://www.linkedin.com/in/jivan-jamdar/", label: "LinkedIn" },
+  { Icon: SiHuggingface, url: "https://huggingface.co/Jivan01", label: "Hugging Face" },
   { Icon: FaHackerrank, url: "https://www.hackerrank.com/profile/Jivan01", label: "HackerRank" },
   { Icon: SiKaggle, url: "https://www.kaggle.com/jivan1234", label: "Kaggle" },
+  
+
 ];
 
 const socialVariants = {
